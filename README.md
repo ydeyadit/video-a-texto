@@ -89,7 +89,7 @@ Whisper ofrece diferentes "tamaños" de modelo. A mayor tamaño, mayor precisió
 
 ---
 
-# 1. El Diseño Modular del Script
+## 1. El Diseño Modular del Script
 
 El script sigue un flujo lógico de "Entrada -> Proceso -> Salida", con una etapa intermedia de limpieza para no dejar archivos temporales de audio ocupando espacio.
 
@@ -160,17 +160,17 @@ Para manejar múltiples argumentos de forma elegante (el vídeo y el idioma), lo
 
 ## 3. Cómo Ejecutar el Nuevo Script
 
-    - python video_a_texto.py mi_video.mp4 --lang es
+Caso 1: - python video_a_texto.py mi_video.mp4 --lang es
 
-Caso 2: Vídeo en Inglés Americano - python video_a_texto.py tutorial_usa.mkv -l en
+Caso 2: Vídeo en Inglés Americano - `python video_a_texto.py tutorial_usa.mkv -l en`
 
-Caso 3: Si no estás seguro del idioma (Detección automática) - python video_a_texto.py misterio.mp4
+Caso 3: Si no estás seguro del idioma (Detección automática) - `python video_a_texto.py misterio.mp4`
 
 ---
 
-- Parámetro language: En la función model.transcribe(), el argumento language acepta el código ISO del idioma. Si le pasas None, Whisper activa su motor de detección.
+- Parámetro language: En la función `model.transcribe()` , el argumento language acepta el código ISO del idioma. Si le pasas None, Whisper activa su motor de detección.
 - Uso de Flags Cortos: Hemos configurado -l como abreviatura de --lang, lo cual es muy cómodo para perezosos.
-- Ayuda integrada: Si ejecutas python video_a_texto.py --help, el script te explicará automáticamente cómo usarlo.
+- Ayuda integrada: Si ejecutas `python video_a_texto.py --help` , el script te explicará automáticamente cómo usarlo.
 
 ### Resumen de Compensaciones (Trade-offs)
 
@@ -182,7 +182,8 @@ Para facilitar tu elección, aquí tienes una comparación directa de modelos:
 
 ### Modelos **English-only** (Solo para Inglés):
 
-    Si estás 100% seguro de que el vídeo es en inglés, puedes usar las variantes .en (ejemplo: base.en, small.en). Estos modelos son ligeramente más precisos y rápidos que sus equivalentes multilingües, pero no entenderán ni una palabra en español.
+Si estás 100% seguro de que el vídeo es en inglés, puedes usar las variantes .en (ejemplo: base.en, small.en). Estos modelos son ligeramente más precisos y rápidos que sus equivalentes multilingües, pero no entenderán ni una palabra en español.
 
 \*NOTA:
-**Los que me sorŕende de este script es que funciona**
+**Lo que me sorprende de este script es que funciona**
+**video-o-audio-a-texto.py es una variante y lo unico que hace de mas es aceptar un audio como entrada,no sólo un vídeo**
